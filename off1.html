@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,6 +37,42 @@ header {
     margin-right: auto;
 }
 
+.desc {
+    border: 2px black solid;
+    margin-top: 20px;
+    float: right;
+}
+
+.photos {
+
+    margin-top: 20px;
+    width: 850px;
+    height: 445px;
+    border: 2px solid black;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.off1 {
+    max-width: 100%;
+    height: 100%;
+
+}
+
+.price {
+    margin-top: 20px;
+    color: red;
+}
+
+.user-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+
+}
+
 
 
     </style>
@@ -48,7 +85,28 @@ header {
 
 
 
+ <div class="photos">
+    <img src="off/off1.webp" alt="" class="off1">
+</div>
 
-    <img src="off/off1.webp" alt="">
+
+<div class="desc">
+    <h2 class="title">Mercedes-Benz CLA 250 4-Matic AMG Line</h2>
+    <p>2018 &middot 80 000km &middot Gas &middot Sedan </p>
+    <h1 class="price">
+        25 000€
+    </h1>
+
+    <div class="contact">
+        <h2 class="name">James</h2>
+        <svg class="user-icon" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"><ellipse cx="12" cy="8" rx="5" ry="6" fill="#0026ff" class="fill-000000"></ellipse><path d="M21.8 19.1c-.9-1.8-2.6-3.3-4.8-4.2-.6-.2-1.3-.2-1.8.1-1 .6-2 .9-3.2.9s-2.2-.3-3.2-.9c-.5-.2-1.2-.3-1.8 0-2.2.9-3.9 2.4-4.8 4.2-.7 1.3.4 2.8 1.9 2.8h15.8c1.5 0 2.6-1.5 1.9-2.9z" fill="#0026ff" class="fill-000000"></path></svg>        <p style="display: inline-block;">Member of CarZ since 2020</p>
+    
+    
+    
+    </div>
+</div>
+
+
+
 </body>
 </html>
