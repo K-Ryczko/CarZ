@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -117,6 +117,24 @@ a {
     color: rgb(4, 0, 255);
 }
 
+.swiper {
+    height: 445px;
+
+
+}
+
+.swiper-button-next, .swiper-button-prev, .swiper-pagination {
+    background: transparent;
+    color: rgb(4, 0, 255);
+}
+
+.swiper-slide {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 
     </style>
@@ -136,16 +154,40 @@ a {
 
  <div class="photos">
 
-    <img src="off/off1.webp" alt="" class="off1">
+<div class="swiper">
+
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide"><img src="off/1/off1a.webp" alt="" class="off1"></div>
+
+      <div class="swiper-slide"><img src="off/1/off1b.webp" alt="" class="off1"></div>
+
+      <div class="swiper-slide"><img src="off/1/off1c.webp" alt="" class="off1"></div>
+
+      <div class="swiper-slide"><img src="off/1/off1d.webp" alt="" class="off1"></div>
+
+      <div class="swiper-slide"><img src="off/1/off1e.webp" alt="" class="off1"></div>
+
+    </div>
+
+    <div class="swiper-pagination"></div>
+  
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+  </div>
+
+
     
 </div>
 
 
 <div class="desc">
-    <h2 class="title">Mercedes-Benz CLA 250 4-Matic AMG Line</h2>
-    <p>2018 &middot 80 000km &middot Gas &middot Sedan </p>
+    <h2 class="title">Mercedes-Benz CLA 200 4-Matic AMG</h2>
+    <p>2022 &middot 8 000km &middot Gas &middot Sedan </p>
     <h1 class="price">
-        25 000€
+        47 500€
     </h1>
 
     <div class="contact">
@@ -167,7 +209,7 @@ a {
     </div>
 </div>
 
-<script defer>
+<script>
 
     const el = document.getElementById("no");
     
@@ -183,6 +225,33 @@ a {
     console.log(el.innerText)
     
         </script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<script>
+    const swiper = new Swiper('.swiper', {
+
+        autoplay: {
+            delay: 6000,
+            disableOnInteraction: false,
+        },
+
+  loop: true,
+
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+});
+</script>
 
 </body>
 </html>
