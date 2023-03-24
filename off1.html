@@ -1,421 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mercedes-Benz CLA</title>
-    <script src="https://kit.fontawesome.com/c8d258784b.js" crossorigin="anonymous">
-    </script>
-
-
+    <script
+      src="https://kit.fontawesome.com/c8d258784b.js"
+      crossorigin="anonymous"
+    ></script>
 
     <style>
-        *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: whitesmoke;
-}
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        background-color: whitesmoke;
+      }
 
+      header {
+        z-index: 999;
+        display: flex;
+        place-items: center;
+        position: sticky;
+        top: 0;
+        background-color: whitesmoke;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        border-bottom: 0, 5px rgb(150, 150, 150) solid;
+        box-shadow: 0 0 7px rgb(150, 150, 150);
+      }
 
-header {
-    z-index: 999;
-    display: flex;
-    place-items: center;
-    position: sticky;
-    top: 0;
-    background-color: whitesmoke;
-    padding-top: 10px;
-    padding-bottom: 5px;
-    border-bottom: 0,5px rgb(150, 150, 150) solid;
-    box-shadow: 0 0 7px rgb(150, 150, 150);
-}
+      .logo {
+        width: 100px;
+        height: 72px;
+      }
 
-.logo {
-    width: 100px;
-    height: 72px;
+      .desc {
+        border-radius: 10px;
+        border: 0, 5px rgb(150, 150, 150) solid;
+        box-shadow: 0 0 7px rgb(150, 150, 150);
+        margin-top: 20px;
+        margin-right: 15px;
+        padding: 5px;
+        background-color: rgb(220, 220, 220);
+      }
 
+      .photos {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: 445px;
+        border-radius: 10px;
+        border: 1px rgb(150, 150, 150) solid;
+        box-shadow: 0 0 7px rgb(150, 150, 150);
+        padding: 5px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-}
+      .details {
+        padding: 5px;
+        width: 100%;
 
-.desc {
-    border-radius: 10px;
-    border: 0,5px rgb(150, 150, 150) solid;
-    box-shadow: 0 0 7px rgb(150, 150, 150);
-    margin-top: 20px;
-    margin-right: 15px;
-    padding: 5px;
-    background-color: rgb(220, 220, 220);
+        border-radius: 10px;
+        border: 1px rgb(150, 150, 150) solid;
+        box-shadow: 0 0 7px rgb(150, 150, 150);
+        margin-bottom: 20px;
+      }
 
+      .off1 {
+        max-width: 100%;
+        height: 100%;
+      }
 
-}
+      .price {
+        margin-top: 20px;
+        color: red;
+      }
 
+      .user-icon {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+      }
 
+      a {
+        margin-left: auto;
+        margin-right: auto;
+      }
 
+      .user-info {
+        display: flex;
+        align-items: center;
+      }
 
+      .member {
+        margin-left: 3px;
+        color: black;
+      }
 
-.photos {
-    width: 100%;
-    margin-top: 20px;
+      .name {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
 
-    height: 445px;
-    border: 2px solid black;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
+      .contact {
+        margin-left: 20px;
+        width: 200px;
+      }
 
+      .phone {
+        margin-top: 15px;
+        width: 100%;
+        height: 25px;
+        border: 2px rgb(4, 0, 255) solid;
+        display: block;
+      }
 
-.off1 {
-    max-width: 100%;
-    height: 100%;
+      .phone:hover {
+        cursor: pointer;
+      }
 
-}
+      #location {
+        margin-top: 10px;
+        color: rgb(4, 0, 255);
+      }
 
-.price {
-    margin-top: 20px;
-    color: red;
-}
+      .swiper {
+        height: 445px;
+      }
 
-.user-icon {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
+      .swiper-button-next,
+      .swiper-button-prev,
+      .swiper-pagination {
+        background: transparent;
+        color: rgb(4, 0, 255);
+      }
 
-}
+      .swiper-slide {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-a {
-    margin-left: auto;
-    margin-right: auto;
-}
+      ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
 
-.user-info {
-    display: flex;
-    align-items: center;
-}
+      li {
+        flex-basis: 50%;
+        list-style-type: none;
+        margin-top: 15px;
+      }
 
-.member {
-    margin-left: 3px;
-    color: black;
-}
+      .map {
+        border-radius: 10px;
+        border: 1px rgb(150, 150, 150) solid;
+        box-shadow: 0 0 7px rgb(150, 150, 150);
+        text-align: center;
+        padding: 5px;
+        margin-bottom: 50px;
+      }
 
-.name {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
+      .left {
+        margin-left: 15px;
+        float: left;
+        width: 55%;
+      }
 
-.contact {
-    margin-left: 20px;
-    width: 200px;
-}
+      .right {
+        width: 30%;
+        float: right;
+        margin-bottom: 40px;
+      }
 
-.phone {
-    margin-top: 15px;
-    width: 100%;
-    height: 25px;
-    border: 2px rgb(4, 0, 255) solid;
-    display: block;
-}
+      .other img {
+        width: 350px;
+        height: 200px;
+        object-fit: cover;
+      }
 
-.phone:hover {
-    cursor: pointer;
-}
+      .other-off {
+        width: 350px;
 
-#location {
-    margin-top: 10px;
-    color: rgb(4, 0, 255);
-}
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10px;
+        border: 0, 5px rgb(150, 150, 150) solid;
+        box-shadow: 0 0 7px rgb(150, 150, 150);
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
 
-.swiper {
-    height: 445px;
+      .other {
+        margin-right: 15px;
+        width: 370px;
+        background-color: rgb(220, 220, 220);
+        float: right;
+        padding: 10px;
+        border-radius: 10px;
+        border: 0, 5px rgb(150, 150, 150) solid;
+        box-shadow: 0 0 7px rgb(150, 150, 150);
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
 
-
-}
-
-.swiper-button-next, .swiper-button-prev, .swiper-pagination {
-    background: transparent;
-    color: rgb(4, 0, 255);
-}
-
-.swiper-slide {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-
- 
-
-ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-li {
-    flex-basis: 50%;
-    list-style-type: none;
-    margin-top: 15px;
-
-}
-
-.details {
-    padding: 7px;
-    width: 100%;
-
-    border-radius: 10px;
-    border: 2px rgb(150, 150, 150) solid;
-    box-shadow: 0 0 7px rgb(150, 150, 150);
-}
-
-.map {
-    border-radius: 10px;
-    border: 0,5px rgb(150, 150, 150) solid;
-    box-shadow: 0 0 7px rgb(150, 150, 150);
-    text-align: center;
-    padding: 7px;
-}
-
-
-.left {
-    margin-left: 15px;
-    float: left;
-    width: 55%;
-}
-
-
-.right {
-    width: 30%;
-    float: right;
-    margin-bottom: 40px;
-}
-
-
-.other img {
-    width: 350px;
-    height: 200px;
-    object-fit: cover;
-
-}
-
-.other-off {
-
-    width: 350px;
-
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 10px;
-    border: 0,5px rgb(150, 150, 150) solid;
-    box-shadow: 0 0 7px rgb(150, 150, 150);
-    margin-bottom: 20px;
-    cursor: pointer;
-
-
-}
-
-.other{
-    margin-right: 15px;
-    width: 370px;
-    background-color: rgb(220, 220, 220);
-    float: right;
-    padding: 10px;
-    border-radius: 10px;
-    border: 0,5px rgb(150, 150, 150) solid;
-    box-shadow: 0 0 7px rgb(150, 150, 150);
-    margin-bottom: 20px;
-    cursor: pointer;
-}
-
-
-
-
+      .description {
+        width: 100%;
+        border-radius: 10px;
+        border: 1px rgb(150, 150, 150) solid;
+        box-shadow: 0 0 7px rgb(150, 150, 150);
+        padding: 5px;
+        margin-bottom: 50px;
+      }
     </style>
-
-</head>
-<body>
-
+  </head>
+  <body>
     <header>
-
-    <a href="index.html">
-        <img src="logo.webp" alt="" class="logo" >
-    </a>
-
+      <a href="index.html">
+        <img src="logo.webp" alt="" class="logo" />
+      </a>
     </header>
 
-<div class="left">
+    <div class="left">
+      <div class="photos">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="off/1/off1a.webp" alt="" class="off1" />
+            </div>
 
- <div class="photos">
+            <div class="swiper-slide">
+              <img src="off/1/off1b.webp" alt="" class="off1" />
+            </div>
 
-<div class="swiper">
+            <div class="swiper-slide">
+              <img src="off/1/off1c.webp" alt="" class="off1" />
+            </div>
 
-    <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="off/1/off1d.webp" alt="" class="off1" />
+            </div>
 
-      <div class="swiper-slide"><img src="off/1/off1a.webp" alt="" class="off1"></div>
+            <div class="swiper-slide">
+              <img src="off/1/off1e.webp" alt="" class="off1" />
+            </div>
+          </div>
 
-      <div class="swiper-slide"><img src="off/1/off1b.webp" alt="" class="off1"></div>
+          <div class="swiper-pagination"></div>
 
-      <div class="swiper-slide"><img src="off/1/off1c.webp" alt="" class="off1"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
 
-      <div class="swiper-slide"><img src="off/1/off1d.webp" alt="" class="off1"></div>
+      <div class="details">
+        <ul>
+          <li>Vehicle Brand: Mercedes-Benz</li>
 
-      <div class="swiper-slide"><img src="off/1/off1e.webp" alt="" class="off1"></div>
+          <li>Body Type: Sedan</li>
 
+          <li>Vehicle Model: CLA</li>
+
+          <li>Condition: New</li>
+
+          <li>Version: 200 4-Matic AMG Line 8G-DCT</li>
+
+          <li>Fuel type: Gas</li>
+
+          <li>Production Year: 2022</li>
+
+          <li>Transmission: Automatic</li>
+
+          <li>Power: 163HP</li>
+
+          <li>Doors: 4</li>
+
+          <li>Mileage: 8 000km</li>
+
+          <li>Color: Black</li>
+        </ul>
+      </div>
+
+      <div class="description">
+        <h2>Description</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
+          voluptatum reiciendis doloribus quos odit atque consequatur excepturi
+          rerum ullam quae officia, maiores ipsam culpa illum aliquid provident
+          harum quis. Voluptates! Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Illum porro aliquam ad omnis officiis quae impedit,
+          perspiciatis nulla ullam laudantium mollitia quos unde aliquid numquam
+          ex atque enim necessitatibus fugit? Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Harum esse voluptas id sequi quod
+          laboriosam in impedit, maxime odit vel. In reiciendis architecto sit
+          placeat blanditiis, rerum non atque dolorem. Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Saepe aut perspiciatis cumque
+          nostrum voluptas fugit corrupti distinctio, magni, quas praesentium
+          harum qui laboriosam architecto voluptatem dolores optio doloribus
+          obcaecati dignissimos. Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Reiciendis velit fugit a laborum eius magnam
+          molestiae, perspiciatis, facere aspernatur libero quis facilis
+          voluptatum? Magni tempora itaque soluta sunt, accusantium placeat!
+        </p>
+      </div>
+
+      <div class="map">
+        <h2>Near this area</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15528.086735346142!2d2.188400939610756!3d41.38607768697007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1679087957408!5m2!1spl!2spl"
+          width="100%"
+          height="400"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
     </div>
 
-    <div class="swiper-pagination"></div>
-  
-
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  
-  </div>
-
-
-    
-</div>
-
-<div class="details">
-
-    <ul>
-
-    <li>Vehicle Brand: Mercedes-Benz</li>
-    
-        <li>Body Type: Sedan</li>
-
-    <li>Vehicle Model: CLA</li>
-
-        <li>Condition: New</li>
-
-    <li>Version: 200 4-Matic AMG Line 8G-DCT</li>
-
-        <li>Fuel type: Gas</li>
-
-    <li>Production Year: 2022</li>
-
-        <li>Transmission: Automatic</li>
-
-    <li>Power: 163HP</li>
-
-        <li>Doors: 4</li>
-
-    <li>Mileage: 8 000km</li>
-
-        <li>Color: Black</li>
-
-</ul>
-
-</div>
-
-<div class="map">
-    <h2>Near this area</h2>
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15528.086735346142!2d2.188400939610756!3d41.38607768697007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1679087957408!5m2!1spl!2spl" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-</div>
-
-<div class="right">
-
-<div class="desc">
-    <h2 class="title" style="background-color: rgb(220, 220, 220);">Mercedes-Benz CLA 200 4-Matic AMG</h2>
-    <p style="background-color: rgb(220, 220, 220);">2022 &middot 8 000km &middot Gas &middot Sedan </p>
-    <h1 class="price" style="background-color: rgb(220, 220, 220);">
-        47 500€
-    </h1>
-
-    <div class="contact" style="background-color: rgb(220, 220, 220);">
-        <h2 class="name" style="background-color: rgb(220, 220, 220);">James</h2>
-        <div class="user-info" style="background-color: rgb(220, 220, 220);">
-        <i class="fa-solid fa-user" style="color: rgb(4, 0, 255); background-color: rgb(220, 220, 220);"><span class="member" style="background-color: rgb(220, 220, 220);" >Member of CarZ since 2020</span></i>        
-        
-
-    </div>
-    <i class="fa-solid fa-location-dot" id="location" style="background-color: rgb(220, 220, 220);" > <span style="color: black; background-color: rgb(220, 220, 220);"> Barcelona</span></i>
-
-    <button class="phone" id="no">See Telephone Number</button>
-
-
-    
-    
-    
-    
-    </div>
-</div>
-</div>
-
-<div class="other">
-    <h2 style="background-color: lightgrey;">Offers You may be interested in:</h2>
-
-    <div class="other-off">
-        <img src="off/off2a.webp" alt="">
-        <p>2014 · 42 000 km · Gas · Coupe </p>
-        <h2 class="price">
-            125 000€
+    <div class="right">
+      <div class="desc">
+        <h2 class="title" style="background-color: rgb(220, 220, 220)">
+          Mercedes-Benz CLA 200 4-Matic AMG
         </h2>
+        <p style="background-color: rgb(220, 220, 220)">
+          2022 &middot 8 000km &middot Gas &middot Sedan
+        </p>
+        <h1 class="price" style="background-color: rgb(220, 220, 220)">
+          47 500€
+        </h1>
+
+        <div class="contact" style="background-color: rgb(220, 220, 220)">
+          <h2 class="name" style="background-color: rgb(220, 220, 220)">
+            James
+          </h2>
+          <div class="user-info" style="background-color: rgb(220, 220, 220)">
+            <i
+              class="fa-solid fa-user"
+              style="
+                color: rgb(4, 0, 255);
+                background-color: rgb(220, 220, 220);
+              "
+              ><span class="member" style="background-color: rgb(220, 220, 220)"
+                >Member of CarZ since 2020</span
+              ></i
+            >
+          </div>
+          <i
+            class="fa-solid fa-location-dot"
+            id="location"
+            style="background-color: rgb(220, 220, 220)"
+          >
+            <span style="color: black; background-color: rgb(220, 220, 220)">
+              Barcelona</span
+            ></i
+          >
+
+          <button class="phone" id="no">See Telephone Number</button>
+        </div>
+      </div>
     </div>
-    <div class="other-off">
-        <img src="off/off2a.webp" alt="">
-        <p>2014 · 42 000 km · Gas · Coupe </p>
-        <h2 class="price">
-            125 000€
-        </h2>
+
+    <div class="other">
+      <h2 style="background-color: rgb(220, 220, 220)">
+        Offers You may be interested in:
+      </h2>
+
+      <div class="other-off">
+        <img src="off/off2a.webp" alt="" />
+        <p>2014 · 42 000 km · Gas · Coupe</p>
+        <h2 class="price">125 000€</h2>
+      </div>
+      <div class="other-off">
+        <img src="off/off2a.webp" alt="" />
+        <p>2014 · 42 000 km · Gas · Coupe</p>
+        <h2 class="price">125 000€</h2>
+      </div>
+      <div class="other-off">
+        <img src="off/off2a.webp" alt="" />
+        <p>2014 · 42 000 km · Gas · Coupe</p>
+        <h2 class="price">125 000€</h2>
+      </div>
     </div>
-    <div class="other-off">
-        <img src="off/off2a.webp" alt="">
-        <p>2014 · 42 000 km · Gas · Coupe </p>
-        <h2 class="price">
-            125 000€
-        </h2>
-    </div>
-</div>
 
+    <script>
+      const el = document.getElementById("no");
 
+      console.log("ok");
 
+      el.addEventListener("click", (e) => {
+        e.target.innerText = "664 304 082 ";
+        el.removeEventListener("click", () => {});
+      });
 
+      console.log(el.innerText);
+    </script>
 
-<script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-    const el = document.getElementById("no");
-    
-    console.log("ok");
-    
-    el.addEventListener("click", (e) => {
-      e.target.innerText = "664 304 082 ";
-      el.removeEventListener("click", () => {});
-    })
-    
-
-    
-    console.log(el.innerText)
-    
-        </script>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-<script>
-    const swiper = new Swiper('.swiper', {
-
+    <script>
+      const swiper = new Swiper(".swiper", {
         autoplay: {
-            delay: 6000,
-            disableOnInteraction: false,
+          delay: 6000,
+          disableOnInteraction: false,
         },
 
-  loop: true,
+        loop: true,
 
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
 
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
-
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-});
-</script>
-
-</body>
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
 </html>
