@@ -192,20 +192,48 @@
         margin-bottom: 50px;
       }
 
+      .interested {
+        padding-top: 20px;
+        padding-bottom: 30px;
+        float: left;
+        width: 100%;
+        border: 0, 5px rgb(220, 220, 220) solid;
+        border-radius: 10px;
+        box-shadow: 0 0 7px rgb(150, 150, 150);
+        background-color: rgb(220, 220, 220);
+      }
+
       .other {
         display: flex;
         float: left;
         width: 100%;
-        margin-bottom: 200px;
+        background-color: rgb(220, 220, 220);
+
+        flex-direction: row;
+        justify-content: space-around;
+        flex-flow: wrap;
       }
 
       .other-img {
-        width: 33%;
+        padding: 5px;
+        width: 20%;
+        border: 2px rgb(60, 60, 60) solid;
+        border-radius: 10px;
+        box-shadow: 0 0 7px rgb(150, 150, 150);
       }
 
       .other img {
         object-fit: cover;
         width: 100%;
+        max-height: 300px;
+      }
+
+      .other-img,
+      .other-img img,
+      .other-img h3,
+      .other-img h2,
+      .other-img p {
+        background-color: rgb(160, 160, 160);
       }
     </style>
   </head>
@@ -355,25 +383,41 @@
         </div>
       </div>
     </div>
-
-    <div class="other">
-      <div class="other-img">
-        <img src="off/1/off1a.webp" alt="" class="o1" />
-        <h3>Mercedes-Benz CLA</h3>
-        <p>2022 &middot 8 000km &middot Gas &middot Sedan</p>
-        <h2 class="price">47 500€</h2>
-      </div>
-      <div class="other-img">
-        <img src="off/1/off1a.webp" alt="" class="o1" />
-        <h3>Mercedes-Benz CLA</h3>
-        <p>2022 &middot 8 000km &middot Gas &middot Sedan</p>
-        <h2 class="price">47 500€</h2>
-      </div>
-      <div class="other-img">
-        <img src="off/1/off1a.webp" alt="" class="o1" />
-        <h3>Mercedes-Benz CLA</h3>
-        <p>2022 &middot 8 000km &middot Gas &middot Sedan</p>
-        <h2 class="price">47 500€</h2>
+    <div class="interested">
+      <h2
+        style="
+          background-color: rgb(220, 220, 220);
+          margin-left: 25px;
+          margin-bottom: 15px;
+        "
+      >
+        Offers you might be also interested in:
+      </h2>
+      <div class="other">
+        <div class="other-img">
+          <img src="off/1/off1a.webp" alt="" class="o1" />
+          <h3>Mercedes-Benz CLA</h3>
+          <p>2022 &middot 8 000km &middot Gas &middot Sedan</p>
+          <h2 class="price">47 500€</h2>
+        </div>
+        <div class="other-img">
+          <img src="off/1/off1a.webp" alt="" class="o1" />
+          <h3>Mercedes-Benz CLA</h3>
+          <p>2022 &middot 8 000km &middot Gas &middot Sedan</p>
+          <h2 class="price">47 500€</h2>
+        </div>
+        <div class="other-img">
+          <img src="off/1/off1a.webp" alt="" class="o1" />
+          <h3>Mercedes-Benz CLA</h3>
+          <p>2022 &middot 8 000km &middot Gas &middot Sedan</p>
+          <h2 class="price">47 500€</h2>
+        </div>
+        <div class="other-img">
+          <img src="off/1/off1a.webp" alt="" class="o1" />
+          <h3>Mercedes-Benz CLA</h3>
+          <p>2022 &middot 8 000km &middot Gas &middot Sedan</p>
+          <h2 class="price">47 500€</h2>
+        </div>
       </div>
     </div>
 
