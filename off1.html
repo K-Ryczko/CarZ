@@ -51,6 +51,7 @@
         background-color: rgb(220, 220, 220);
         margin-bottom: 100px;
         padding-bottom: 10px;
+        float: right;
       }
 
       .photos {
@@ -182,12 +183,6 @@
         width: 55%;
       }
 
-      .right {
-        width: 30%;
-        float: right;
-        margin-bottom: 40px;
-      }
-
       .description {
         width: 100%;
         border-radius: 10px;
@@ -240,6 +235,19 @@
       .other-img p {
         background-color: rgb(160, 160, 160);
       }
+
+      @media (max-width: 950px) {
+        .desc {
+          float: left;
+        }
+        .left {
+          width: 80%;
+        }
+      }
+
+      .all {
+        width: 100%;
+      }
     </style>
   </head>
   <body>
@@ -280,7 +288,44 @@
           <div class="swiper-button-next"></div>
         </div>
       </div>
+    </div>
 
+    <div class="desc">
+      <h2 class="title" style="background-color: rgb(220, 220, 220)">
+        Mercedes-Benz CLA 200 4-Matic AMG
+      </h2>
+      <p style="background-color: rgb(220, 220, 220); margin-bottom: 20px">
+        2022 &middot 8 000km &middot Gas &middot Sedan
+      </p>
+      <h1 class="price" style="background-color: rgb(220, 220, 220)">
+        47 500€
+      </h1>
+
+      <div class="contact" style="background-color: rgb(160, 160, 160)">
+        <h2 class="name" style="background-color: rgb(160, 160, 160)">James</h2>
+        <div class="user-info" style="background-color: rgb(160, 160, 160)">
+          <i
+            class="fa-solid fa-user"
+            style="color: #3988cd; background-color: rgb(160, 160, 160)"
+            ><span class="member" style="background-color: rgb(160, 160, 160)"
+              >Member of CarZ since 2020</span
+            ></i
+          >
+        </div>
+        <i
+          class="fa-solid fa-location-dot"
+          id="location"
+          style="background-color: rgb(160, 160, 160)"
+        >
+          <span style="color: black; background-color: rgb(160, 160, 160)">
+            Barcelona</span
+          ></i
+        >
+
+        <button class="phone" id="no">See Telephone Number</button>
+      </div>
+    </div>
+    <div class="left">
       <div class="details">
         <ul>
           <li>Vehicle Brand: Mercedes-Benz</li>
@@ -346,45 +391,6 @@
       </div>
     </div>
 
-    <div class="right">
-      <div class="desc">
-        <h2 class="title" style="background-color: rgb(220, 220, 220)">
-          Mercedes-Benz CLA 200 4-Matic AMG
-        </h2>
-        <p style="background-color: rgb(220, 220, 220); margin-bottom: 20px">
-          2022 &middot 8 000km &middot Gas &middot Sedan
-        </p>
-        <h1 class="price" style="background-color: rgb(220, 220, 220)">
-          47 500€
-        </h1>
-
-        <div class="contact" style="background-color: rgb(160, 160, 160)">
-          <h2 class="name" style="background-color: rgb(160, 160, 160)">
-            James
-          </h2>
-          <div class="user-info" style="background-color: rgb(160, 160, 160)">
-            <i
-              class="fa-solid fa-user"
-              style="color: #3988cd; background-color: rgb(160, 160, 160)"
-              ><span class="member" style="background-color: rgb(160, 160, 160)"
-                >Member of CarZ since 2020</span
-              ></i
-            >
-          </div>
-          <i
-            class="fa-solid fa-location-dot"
-            id="location"
-            style="background-color: rgb(160, 160, 160)"
-          >
-            <span style="color: black; background-color: rgb(160, 160, 160)">
-              Barcelona</span
-            ></i
-          >
-
-          <button class="phone" id="no">See Telephone Number</button>
-        </div>
-      </div>
-    </div>
     <div class="interested">
       <h2
         style="
