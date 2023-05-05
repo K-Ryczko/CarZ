@@ -208,13 +208,11 @@
 
       .other {
         display: flex;
-        float: left;
         width: 100%;
         background-color: rgb(220, 220, 220);
-
         flex-direction: row;
         justify-content: space-around;
-        flex-flow: wrap;
+        flex-wrap: wrap;
       }
 
       .other-img {
@@ -253,14 +251,14 @@
         width: 100%;
       }
 
-      @media (max-width: 750px) {
+      @media (max-width: 800px) {
         .other {
           flex-direction: column;
         }
         .other-img {
           width: 80%;
-          float: right;
-          justify-content: center;
+          margin: auto;
+          margin-bottom: 20px;
         }
       }
     </style>
@@ -410,7 +408,7 @@
       <h2
         style="
           background-color: rgb(220, 220, 220);
-          margin-left: 25px;
+          text-align: center;
           margin-bottom: 15px;
         "
       >
