@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porsche Panamera 4S</title>
+    <script
+      src="https://kit.fontawesome.com/c8d258784b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        background-color: whitesmoke;
+      }
+
+      header {
+        z-index: 999;
+        display: flex;
+        place-items: center;
+        position: sticky;
+        top: 0;
+        background-color: whitesmoke;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        border-bottom: 0, 5px rgb(150, 150, 150) solid;
+        box-shadow: 0 0 7px rgb(150, 150, 150);
+      }
+
+      .logo {
+        width: 100px;
+        height: 72px;
+      }
+
+      .desc {
+        border-radius: 10px;
+        border: 0, 5px rgb(150, 150, 150) solid;
+        box-shadow: 0 0 7px rgb(150, 150, 150);
+        margin-top: 20px;
+        margin-left: 10px;
+        padding: 5px;
+        background-color: rgb(220, 220, 220);
+        margin-bottom: 100px;
+        padding-bottom: 10px;
+        float: right;
+        width: 30%;
+      }
+
+      .photos {
+        width: 97%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: auto;
+        border-radius: 10px;
+        border: 1px rgb(150, 150, 150) solid;
+        box-shadow: 0 0 7px rgb(150, 150, 150);
+        padding: 5px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .details {
+        padding: 5px;
+        width: 97%;
+
+        border-radius: 10px;
+        border: 1px rgb(150, 150, 150) solid;
+        box-shadow: 0 0 7px rgb(150, 150, 150);
+        margin-bottom: 20px;
+      }
+
+      .off1 {
+        object-fit: scale-down;
+        max-width: 100%;
+        height: 100%;
+      }
+
+      .price {
+        color: red;
+      }
+
+      .user-icon {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+      }
+
+      a {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .user-info {
+        display: flex;
+        align-items: center;
+      }
+
+      .member {
+        margin-left: 3px;
+        color: black;
+      }
+
+      .name {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .contact {
+        width: 97%;
+        padding: 5px;
+        border: 2px rgb(60, 60, 60) solid;
+        border-radius: 10px;
+        box-shadow: 0 0 7px rgb(150, 150, 150);
+      }
+
+      .phone {
+        margin-top: 15px;
+        width: 100%;
+        height: 25px;
+        border: 2px #3988cd solid;
+        display: block;
+      }
+
+      .phone:hover {
+        cursor: pointer;
+      }
+
+      #location {
+        margin-top: 10px;
+        color: #3988cd;
+      }
+
+      .swiper {
+        height: 445px;
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev,
+      .swiper-pagination {
+        background: transparent;
+        color: #3988cd;
+      }
+
+      .swiper-slide {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      li {
+        flex-basis: 50%;
+        list-style-type: none;
+        margin-top: 15px;
+      }
+
+      .map {
+        border-radius: 10px;
+        border: 1px rgb(150, 150, 150) solid;
+        box-shadow: 0 0 7px rgb(150, 150, 150);
+        text-align: center;
+        padding: 5px;
+        margin-bottom: 50px;
+        width: 97%;
+      }
+
+      .left {
+        margin-left: 10px;
+        float: left;
+        width: 55%;
+      }
+
+      .description {
+        width: 97%;
+        border-radius: 10px;
+        border: 1px rgb(150, 150, 150) solid;
+        box-shadow: 0 0 7px rgb(150, 150, 150);
+        padding: 5px;
+        margin-bottom: 50px;
+      }
+
+      .interested {
+        padding-top: 20px;
+        padding-bottom: 30px;
+        float: left;
+        width: 100%;
+        border: 0, 5px rgb(220, 220, 220) solid;
+        border-radius: 10px;
+        box-shadow: 0 0 7px rgb(150, 150, 150);
+        background-color: rgb(220, 220, 220);
+      }
+
+      .other {
+        display: flex;
+        width: 100%;
+        background-color: rgb(220, 220, 220);
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .other-img {
+        padding: 5px;
+        width: 20%;
+        border: 2px rgb(60, 60, 60) solid;
+        border-radius: 10px;
+        box-shadow: 0 0 7px rgb(150, 150, 150);
+      }
+
+      .other img {
+        object-fit: cover;
+        width: 100%;
+        height: 220px;
+      }
+
+      .other-img,
+      .other-img img,
+      .other-img h3,
+      .other-img h2,
+      .other-img p {
+        background-color: rgb(160, 160, 160);
+      }
+
+      body {
+        background-color: rgb(220, 220, 220);
+      }
+
+      @media (max-width: 1200px) {
+        .desc {
+          float: left;
+          width: 93%;
+          margin-left: 2%;
+        }
+        .left {
+          width: 96%;
+          margin-left: 2%;
+        }
+      }
+
+      .all {
+        width: 100%;
+      }
+
+      @media (max-width: 800px) {
+        .other {
+          flex-direction: column;
+        }
+        .other-img {
+          width: 80%;
+          margin: auto;
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="logo.webp" alt="" class="logo" />
+      </a>
+    </header>
+
+    <div class="left">
+      <div class="photos">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="off/6/off6a.webp" alt="" class="off1" />
+            </div>
+
+            <div class="swiper-slide">
+              <img src="off/6/off6b.webp" alt="" class="off1" />
+            </div>
+
+            <div class="swiper-slide">
+              <img src="off/6/off6c.webp" alt="" class="off1" />
+            </div>
+
+            <div class="swiper-slide">
+              <img src="off/6/off6d.webp" alt="" class="off1" />
+            </div>
+
+            <div class="swiper-slide">
+              <img src="off/6/off6e.webp" alt="" class="off1" />
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="desc">
+      <h2 class="title" style="background-color: rgb(220, 220, 220)">
+        Porsche Panamera 4S
+      </h2>
+      <p style="background-color: rgb(220, 220, 220); margin-bottom: 20px">
+        2018 &middot 75 000km &middot Gas &middot Sedan
+      </p>
+      <h1 class="price" style="background-color: rgb(220, 220, 220)">
+        89 500€
+      </h1>
+
+      <div class="contact" style="background-color: rgb(160, 160, 160)">
+        <h2 class="name" style="background-color: rgb(160, 160, 160)">Adam</h2>
+        <div class="user-info" style="background-color: rgb(160, 160, 160)">
+          <i
+            class="fa-solid fa-user"
+            style="color: #3988cd; background-color: rgb(160, 160, 160)"
+            ><span class="member" style="background-color: rgb(160, 160, 160)"
+              >Member of CarZ since 2022</span
+            ></i
+          >
+        </div>
+        <i
+          class="fa-solid fa-location-dot"
+          id="location"
+          style="background-color: rgb(160, 160, 160)"
+        >
+          <span style="color: black; background-color: rgb(160, 160, 160)">
+            Barcelona</span
+          ></i
+        >
+
+        <button class="phone" id="no">See Telephone Number</button>
+      </div>
+    </div>
+    <div class="left">
+      <div class="details">
+        <ul>
+          <li>Vehicle Brand: Porsche</li>
+
+          <li>Body Type: Sedan</li>
+
+          <li>Vehicle Model: Panamera</li>
+
+          <li>Condition: Used</li>
+
+          <li>Version: 4S</li>
+
+          <li>Fuel type: Gas</li>
+
+          <li>Production Year: 2018</li>
+
+          <li>Transmission: Automatic</li>
+
+          <li>Power: 440HP</li>
+
+          <li>Doors: 4</li>
+
+          <li>Mileage: 75 000km</li>
+
+          <li>Color: Black</li>
+        </ul>
+      </div>
+
+      <div class="description">
+        <h2>Description</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
+          voluptatum reiciendis doloribus quos odit atque consequatur excepturi
+          rerum ullam quae officia, maiores ipsam culpa illum aliquid provident
+          harum quis. Voluptates! Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Illum porro aliquam ad omnis officiis quae impedit,
+          perspiciatis nulla ullam laudantium mollitia quos unde aliquid numquam
+          ex atque enim necessitatibus fugit? Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Harum esse voluptas id sequi quod
+          laboriosam in impedit, maxime odit vel. In reiciendis architecto sit
+          placeat blanditiis, rerum non atque dolorem. Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Saepe aut perspiciatis cumque
+          nostrum voluptas fugit corrupti distinctio, magni, quas praesentium
+          harum qui laboriosam architecto voluptatem dolores optio doloribus
+          obcaecati dignissimos. Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Reiciendis velit fugit a laborum eius magnam
+          molestiae, perspiciatis, facere aspernatur libero quis facilis
+          voluptatum? Magni tempora itaque soluta sunt, accusantium placeat!
+        </p>
+      </div>
+
+      <div class="map">
+        <h2>Near this area</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d53764.69908620772!2d2.141345779805069!3d41.38100568608093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1681497005796!5m2!1spl!2spl"
+          width="100%"
+          height="400"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="interested">
+      <h2
+        style="
+          background-color: rgb(220, 220, 220);
+          text-align: center;
+          margin-bottom: 15px;
+        "
+      >
+        Offers you might be also interested in:
+      </h2>
+      <div class="other">
+        <div class="other-img">
+          <img src="off/2/off2a.webp" alt="" class="o1" />
+          <h3>Bentley Continental GT Speed</h3>
+          <p>2016 &middot 22 000km &middot Gas &middot Cabrio</p>
+          <h2 class="price">119 000€</h2>
+        </div>
+        <div class="other-img">
+          <img src="off/3/off3a.webp" alt="" class="o1" />
+          <h3>Mercedes-Benz G Class AMG 63</h3>
+          <p>2019 &middot 48 000km &middot Gas &middot SUV</p>
+          <h2 class="price">270 000€</h2>
+        </div>
+        <div class="other-img">
+          <img src="off/1/off1a.webp" alt="" class="o1" />
+          <h3>Mercedes-Benz CLA</h3>
+          <p>2022 &middot 8 000km &middot Gas &middot Sedan</p>
+          <h2 class="price">47 500€</h2>
+        </div>
+        <div class="other-img">
+          <img src="off/1/off1a.webp" alt="" class="o1" />
+          <h3>Mercedes-Benz CLA</h3>
+          <p>2022 &middot 8 000km &middot Gas &middot Sedan</p>
+          <h2 class="price">47 500€</h2>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const el = document.getElementById("no");
+
+      console.log("ok");
+
+      el.addEventListener("click", (e) => {
+        e.target.innerText = "239 834 294 ";
+        el.removeEventListener("click", () => {});
+      });
+
+      console.log(el.innerText);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper(".swiper", {
+        autoplay: {
+          delay: 6000,
+          disableOnInteraction: false,
+        },
+
+        loop: true,
+
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
