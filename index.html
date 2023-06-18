@@ -16,16 +16,19 @@
       src="https://kit.fontawesome.com/c8d258784b.js"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js" defer></script>
   </head>
 
   <body>
     <header>
       <div class="line">
         <img src="logo.webp" alt="" class="logo" />
-
-        <input type="search" placeholder="Search" class="search" />
+        <div class="search-wrapper">
+        <input type="search"id="searchInput" placeholder="Search" class="search" onkeyup="search()" />
       </div>
     </header>
+
+    <div id="offers">
 
     <div class="oo">
       <a href="off1.html">
@@ -123,6 +126,8 @@
         <p>2019 &middot 34 000 km &middot Gas &middot SUV</p>
         <h2 class="price">40 000€</h2>
       </div>
+      </div>
     </div>
+        <div id="searchResults"></div>
   </body>
 </html>
